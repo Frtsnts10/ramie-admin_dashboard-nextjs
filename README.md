@@ -1,3 +1,9 @@
+# RAMIE Project (Ramie-Admin-Dashboard)
+RAMIE is a clothing brand. We're building a Dashboard to control our end
+
+## *This is initial build.*
+Credits: [YouTube](https://youtu.be/5miHyP6lExg?si=rJkquecktsizxtiK)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

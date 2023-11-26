@@ -15,7 +15,7 @@ model Store {
   id        String      @id @default(uuid())
   name      String
   userId    String
-  billboard Billboard[] @relation("StoreToBillboard")
+  billboards Billboard[] @relation("StoreToBillboard")
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
 }

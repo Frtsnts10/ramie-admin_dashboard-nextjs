@@ -9,13 +9,13 @@ import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
 import { APIList } from "@/components/ui/api-list";
 
-import { columns, SizeColumn } from "./columns";
+import { columns, ColorColumn } from "./columns";
 
-interface SizesClientProps {
-  data: SizeColumn[];
+interface ColorsClientProps {
+  data: ColorColumn[];
 }
 
-export const SizesClient: React.FC<SizesClientProps> = ({ data }) => {
+export const ColorsClient: React.FC<ColorsClientProps> = ({ data }) => {
   const params = useParams();
   const router = useRouter();
 
@@ -23,10 +23,10 @@ export const SizesClient: React.FC<SizesClientProps> = ({ data }) => {
     <>
       <div className="flex items-center justify-between">
         <Heading
-          title={`Sizes (${data.length})`}
-          description="Manage sizes for your store"
+          title={`Colors (${data.length})`}
+          description="Manage colors for your store"
         />
-        <Button onClick={() => router.push(`/${params.storeId}/sizes/new`)}>
+        <Button onClick={() => router.push(`/${params.storeId}/colors/new`)}>
           <Plus className="mr-2 h-4 w-4" /> Add New
         </Button>
       </div>
@@ -35,11 +35,11 @@ export const SizesClient: React.FC<SizesClientProps> = ({ data }) => {
 
       <DataTable searchKey="name" columns={columns} data={data} />
 
-      <Heading title="API" description="API Calls for Sizes" />
+      <Heading title="API" description="API Calls for Colors" />
 
       <Separator />
 
-      <APIList entityName="sizes" entityIdName="sizeId" />
+      <APIList entityName="colors" entityIdName="colorId" />
     </>
   );
 };
